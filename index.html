@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moorland Garden Rooms | Bespoke Garden Rooms, Colne &amp; Nationwide</title>
+<meta name="description" content="Bespoke design and build garden rooms from Moorland Products and Services. Fully insulated, full electrics, turn-key installation. Based in Colne, fitting nationwide. Free no-obligation quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   MOORLAND GARDEN ROOMS
+   Warm near-black (Lindworm, deepened) + hunter green (client ref,
+   ~= sampled composite cladding) + antique brass (spirit of the
+   cedar, AA-corrected to #BC9862). Brand blue kept as a hairline.
+   ============================================================ */
+:root{
+  --base:#22221F;
+  --base-2:#1A1A18;
+  --panel:#2C2F2C;
+  --deep:#3E4B4A;
+  --line:rgba(244,242,237,.09);
+  --line-2:rgba(188,152,98,.28);
+
+  --brass:#BC9862;
+  --champagne:#D9C4A0;
+  --brand:#0842AE;
+
+  --text:#F4F2ED;
+  --muted:#9A9B94;
+  --muted-2:#71736C;
+
+  --shadow-lift:0 30px 64px -16px rgba(0,0,0,.75);
+  --ease:.3s cubic-bezier(.4,0,.2,1);
+  --maxw:1240px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--base);
+  color:var(--text);
+  font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:17px;
+  font-weight:400;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* ---------- Type ---------- */
+h1,h2,h3{
+  font-family:'Archivo Narrow',sans-serif;
+  text-transform:uppercase;
+  font-weight:600;
+  letter-spacing:.045em;
+  line-height:1.08;
+}
+h2{font-size:clamp(2rem,4.4vw,3.1rem)}
+h3{font-size:1.22rem;letter-spacing:.06em}
+
+.eyebrow{
+  display:flex;align-items:center;gap:.85rem;
+  font-family:'Archivo Narrow',sans-serif;
+  text-transform:uppercase;
+  font-size:.76rem;font-weight:600;letter-spacing:.3em;
+  color:var(--brass);
+  margin-bottom:1.3rem;
+}
+.eyebrow::before{
+  content:"";width:40px;height:1px;flex:none;
+  background:linear-gradient(90deg,var(--brass),transparent);
+}
+.lede{color:var(--muted);font-size:1.06rem;font-weight:300;max-width:58ch}
+
+/* ---------- Layout ---------- */
+.wrap{
+  width:100%;max-width:var(--maxw);margin-inline:auto;
+  padding-left:24px;padding-right:24px;
+}
+section{padding-top:110px;padding-bottom:110px}
+.sec-panel{background:var(--panel)}
+.sec-deep{background:var(--base-2)}
+
+/* ---------- Nav ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:100;
+  padding-top:18px;padding-bottom:18px;
+  background:rgba(34,34,31,.5);
+  backdrop-filter:blur(16px) saturate(1.1);
+  -webkit-backdrop-filter:blur(16px) saturate(1.1);
+  border-bottom:1px solid transparent;
+  transition:background var(--ease),border-color var(--ease),padding var(--ease);
+}
+.nav.is-stuck{
+  background:rgba(26,26,24,.94);
+  border-bottom-color:var(--line);
+  padding-top:11px;padding-bottom:11px;
+}
+.nav__inner{
+  width:100%;max-width:100%;
+  padding-left:40px;padding-right:40px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.nav__logo img{height:52px;width:auto}
+.nav__links{display:flex;align-items:center;gap:34px}
+.nav__links a{
+  position:relative;
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.8rem;font-weight:500;letter-spacing:.2em;
+  color:var(--muted);
+  transition:color var(--ease);
+}
+.nav__links a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:-7px;
+  height:2px;background:var(--brand);
+  transition:right var(--ease);
+}
+.nav__links a:hover,.nav__links a:focus-visible{color:var(--text)}
+.nav__links a:hover::after{right:0}
+.nav__links .nav__cta::after{display:none}
+
+.nav__cta{
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.8rem;font-weight:600;letter-spacing:.16em;
+  color:var(--base) !important;
+  background:var(--brass);
+  padding-top:12px;padding-bottom:12px;
+  padding-left:24px;padding-right:24px;
+  border-radius:2px;
+  transition:transform var(--ease),background var(--ease),box-shadow var(--ease);
+}
+.nav__cta:hover{
+  transform:translateY(-2px);background:var(--champagne);
+  box-shadow:0 12px 28px -10px rgba(188,152,98,.6);
+}
+
+.burger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:0;cursor:pointer;
+  padding-top:10px;padding-bottom:10px;
+  padding-left:10px;padding-right:10px;
+  margin-right:-10px;
+}
+.burger span{
+  width:26px;height:1.5px;background:var(--text);
+  transition:transform var(--ease),opacity var(--ease);
+}
+.burger.is-open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.is-open span:nth-child(2){opacity:0}
+.burger.is-open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;min-height:100svh;
+  display:flex;align-items:center;
+  padding-top:150px;padding-bottom:90px;
+  background:var(--base-2);
+  overflow:hidden;
+}
+/* Portrait source (0.75). On wide screens `cover` crops top/bottom hard,
+   so bias right-of-centre to keep the bi-folds and decking in frame
+   rather than the cedar wall in the left foreground. */
+.hero__bg{
+  position:absolute;inset:0;
+  background:url('images/nicedouble.jpg') 68% 50%/cover no-repeat;
+}
+@media(max-width:820px){
+  .hero__bg{background-position:60% 50%}
+}
+.hero__bg::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(20,20,18,.72) 0%,rgba(20,20,18,.42) 42%,rgba(20,20,18,.94) 100%),
+    linear-gradient(90deg,rgba(20,20,18,.88) 0%,rgba(20,20,18,.25) 68%);
+}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{
+  font-size:clamp(2.7rem,6.6vw,5.1rem);
+  max-width:17ch;
+  margin-bottom:1.7rem;
+  letter-spacing:.03em;
+}
+.hero h1 .accent{display:block;color:var(--brass)}
+.hero .lede{font-size:1.12rem;color:#CFCEC6;margin-bottom:2.4rem;max-width:52ch}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:3rem}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.87rem;font-weight:600;letter-spacing:.16em;
+  padding-top:17px;padding-bottom:17px;
+  padding-left:36px;padding-right:36px;
+  border-radius:2px;
+  border:1px solid transparent;cursor:pointer;
+  transition:transform var(--ease),box-shadow var(--ease),background var(--ease),
+             border-color var(--ease),color var(--ease);
+}
+.btn--solid{
+  background:var(--brass);color:var(--base);
+  box-shadow:0 14px 34px -12px rgba(188,152,98,.55);
+}
+.btn--solid:hover{
+  transform:translateY(-3px);background:var(--champagne);
+  box-shadow:0 22px 46px -12px rgba(188,152,98,.7);
+}
+.btn--ghost{
+  border-color:rgba(244,242,237,.28);color:var(--text);
+  background:rgba(244,242,237,.03);
+}
+.btn--ghost:hover{
+  transform:translateY(-3px);border-color:var(--brass);
+  color:var(--brass);background:rgba(188,152,98,.08);
+}
+
+.hero__strip{display:flex;flex-wrap:wrap;align-items:center}
+.pill{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.76rem;font-weight:500;letter-spacing:.18em;
+  color:#CFCEC6;
+  padding-top:8px;padding-bottom:8px;
+  padding-left:22px;padding-right:22px;
+  border-left:1px solid rgba(244,242,237,.16);
+}
+.pill:first-child{padding-left:0;border-left:0}
+.pill svg{width:13px;height:13px;flex:none;stroke:var(--brass)}
+
+/* ---------- Services ---------- */
+/* Exactly four cards -> even 2x2. auto-fit would stretch them to
+   4-across on wide screens and leave each one cramped. */
+.grid-services{
+  display:grid;gap:1px;
+  grid-template-columns:repeat(2,1fr);
+  margin-top:3.6rem;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+@media(max-width:720px){
+  .grid-services{grid-template-columns:1fr}
+}
+.card{
+  position:relative;
+  background:var(--base);
+  padding-top:44px;padding-bottom:40px;
+  padding-left:36px;padding-right:36px;
+  transition:background var(--ease),transform var(--ease),box-shadow var(--ease);
+}
+.card:hover{
+  background:var(--deep);
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-lift);
+  z-index:2;
+}
+.card h3{margin-bottom:.85rem}
+.card p{color:var(--muted);font-size:.97rem;font-weight:300}
+.card__ico{margin-bottom:1.5rem}
+.card__ico svg{
+  width:30px;height:30px;stroke:var(--brass);fill:none;stroke-width:1.3;
+  transition:stroke var(--ease);
+}
+.card:hover .card__ico svg{stroke:var(--champagne)}
+
+/* ---------- Why us ---------- */
+.split{display:grid;gap:64px;grid-template-columns:1fr 1fr;align-items:center}
+.split__img{
+  position:relative;overflow:hidden;
+  box-shadow:var(--shadow-lift);
+  aspect-ratio:4/5;
+  border:1px solid var(--line-2);
+}
+.split__img img{width:100%;height:100%;object-fit:cover}
+.split__img::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 60%,rgba(20,20,18,.45) 100%);
+}
+.ticks{list-style:none;margin-top:2rem;display:grid;gap:20px}
+.ticks li{display:flex;gap:16px;align-items:flex-start;color:var(--muted);font-weight:300}
+.ticks svg{
+  width:18px;height:18px;flex:none;margin-top:5px;
+  stroke:var(--brass);fill:none;stroke-width:2;
+}
+.ticks strong{color:var(--text);font-weight:500}
+
+.stats{
+  display:flex;flex-wrap:wrap;margin-top:2.8rem;
+  border-top:1px solid var(--line);
+}
+.stat{padding-top:24px;padding-bottom:8px;padding-right:44px}
+.stat__n{
+  font-family:'Archivo Narrow',sans-serif;font-weight:600;
+  font-size:2.1rem;line-height:1;letter-spacing:.03em;
+  color:var(--brass);
+}
+.stat__l{
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.68rem;letter-spacing:.2em;color:var(--muted-2);
+  margin-top:.55rem;
+}
+
+/* ---------- Areas ---------- */
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:2.4rem}
+.tag{
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.78rem;font-weight:500;letter-spacing:.16em;
+  color:var(--muted);
+  border:1px solid var(--line);
+  padding-top:11px;padding-bottom:11px;
+  padding-left:22px;padding-right:22px;
+  border-radius:2px;
+  transition:color var(--ease),border-color var(--ease),background var(--ease),transform var(--ease);
+}
+.tag:hover{
+  color:var(--base);border-color:var(--brass);
+  background:var(--brass);transform:translateY(-2px);
+}
+.tag--wide{
+  color:var(--champagne);border-color:var(--line-2);
+  background:rgba(188,152,98,.08);
+}
+.tag--wide:hover{color:var(--base);background:var(--champagne);border-color:var(--champagne)}
+
+/* ---------- Gallery ---------- */
+.gallery{
+  display:grid;gap:12px;
+  grid-template-columns:repeat(4,1fr);
+  margin-top:3.6rem;
+}
+.shot{
+  position:relative;overflow:hidden;
+  aspect-ratio:1/1;cursor:pointer;
+  border:1px solid var(--line);
+  background:var(--panel);
+  transition:transform var(--ease),box-shadow var(--ease),border-color var(--ease);
+}
+.shot img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s cubic-bezier(.4,0,.2,1),filter var(--ease);
+  filter:saturate(.88) brightness(.94);
+}
+.shot::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 45%,rgba(20,20,18,.72) 100%);
+  opacity:.75;transition:opacity var(--ease);
+}
+.shot:hover{
+  transform:translateY(-4px);box-shadow:var(--shadow-lift);
+  border-color:var(--line-2);
+}
+.shot:hover img{transform:scale(1.06);filter:saturate(1) brightness(1)}
+.shot:hover::after{opacity:.4}
+.shot__cap{
+  position:absolute;left:16px;bottom:14px;z-index:2;
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.68rem;font-weight:500;letter-spacing:.18em;
+  color:var(--champagne);
+  opacity:0;transform:translateY(8px);
+  transition:opacity var(--ease),transform var(--ease);
+}
+.shot:hover .shot__cap{opacity:1;transform:translateY(0)}
+
+/* Lightbox */
+.lb{
+  position:fixed;inset:0;z-index:200;
+  display:none;place-items:center;
+  background:rgba(18,18,16,.96);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  padding-top:28px;padding-bottom:28px;
+  padding-left:28px;padding-right:28px;
+}
+.lb.is-open{display:grid}
+.lb img{
+  max-width:min(1100px,92vw);max-height:86vh;width:auto;
+  border:1px solid var(--line-2);
+  box-shadow:0 40px 90px -20px rgba(0,0,0,.9);
+}
+.lb__x{
+  position:absolute;top:24px;right:28px;
+  width:46px;height:46px;
+  background:transparent;border:1px solid rgba(244,242,237,.2);
+  color:var(--text);font-size:1.4rem;line-height:1;cursor:pointer;
+  display:grid;place-items:center;
+  transition:background var(--ease),border-color var(--ease),
+             transform var(--ease),color var(--ease);
+}
+.lb__x:hover{
+  background:var(--brass);border-color:var(--brass);
+  color:var(--base);transform:rotate(90deg);
+}
+.lb__nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:50px;height:50px;
+  background:transparent;border:1px solid rgba(244,242,237,.2);
+  color:var(--text);font-size:1.5rem;cursor:pointer;
+  display:grid;place-items:center;
+  transition:background var(--ease),border-color var(--ease),color var(--ease);
+}
+.lb__nav:hover{background:var(--brass);border-color:var(--brass);color:var(--base)}
+.lb__prev{left:24px}
+.lb__next{right:24px}
+
+/* ---------- Reviews ---------- */
+.grid-reviews{
+  display:grid;gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  margin-top:3.6rem;
+}
+.review{
+  border:1px solid var(--line);
+  padding-top:36px;padding-bottom:34px;
+  padding-left:32px;padding-right:32px;
+  background:rgba(244,242,237,.02);
+  transition:transform var(--ease),border-color var(--ease),background var(--ease);
+}
+.review:hover{
+  transform:translateY(-5px);
+  border-color:var(--line-2);
+  background:rgba(188,152,98,.05);
+}
+.review__mark{
+  font-family:'Archivo Narrow',sans-serif;
+  font-size:3rem;line-height:.6;color:var(--brass);
+  opacity:.5;margin-bottom:1.1rem;
+}
+.review__q{
+  color:var(--text);font-size:1.02rem;font-weight:300;
+  font-style:italic;margin-bottom:1.7rem;line-height:1.75;
+}
+.review h3{
+  font-size:.94rem;letter-spacing:.12em;
+  margin-bottom:.35rem;color:var(--text);
+}
+.review__src{
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.66rem;letter-spacing:.2em;color:var(--muted-2);
+}
+.rev-head{display:flex;align-items:baseline;gap:14px;margin-top:1.8rem}
+.rev-head__score{
+  font-family:'Archivo Narrow',sans-serif;font-weight:600;
+  font-size:1.9rem;letter-spacing:.03em;color:var(--brass);
+}
+.rev-head__txt{font-size:.92rem;color:var(--muted);font-weight:300}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;gap:60px;grid-template-columns:1fr 1fr;margin-top:3.6rem}
+.field{margin-bottom:20px}
+.field label{
+  display:block;
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.7rem;font-weight:500;letter-spacing:.2em;
+  color:var(--muted);margin-bottom:.6rem;
+}
+.field input,.field textarea{
+  width:100%;
+  background:rgba(244,242,237,.03);
+  border:1px solid var(--line);
+  border-radius:2px;
+  padding-top:15px;padding-bottom:15px;
+  padding-left:18px;padding-right:18px;
+  color:var(--text);font-family:inherit;font-size:1rem;font-weight:300;
+  transition:border-color var(--ease),background var(--ease);
+}
+.field textarea{resize:vertical;min-height:140px}
+.field input:focus,.field textarea:focus{
+  outline:none;border-color:var(--brass);
+  background:rgba(188,152,98,.06);
+}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted-2)}
+
+.info__row{
+  display:flex;gap:18px;align-items:flex-start;
+  padding-top:22px;padding-bottom:22px;
+  border-bottom:1px solid var(--line);
+}
+.info__row:last-of-type{border-bottom:0}
+.info__ico{flex:none;padding-top:3px}
+.info__ico svg{width:19px;height:19px;stroke:var(--brass);fill:none;stroke-width:1.4}
+.info__k{
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.68rem;letter-spacing:.2em;color:var(--muted-2);
+  margin-bottom:.35rem;
+}
+.info__v{font-size:1.04rem;color:var(--text);font-weight:300}
+.info__v a{transition:color var(--ease)}
+.info__v a:hover{color:var(--brass)}
+
+.hours{width:100%;border-collapse:collapse;margin-top:1.1rem}
+.hours th{
+  text-align:left;
+  font-family:'Archivo',sans-serif;
+  font-size:.94rem;color:var(--muted);font-weight:300;
+  padding-top:11px;padding-bottom:11px;
+  border-top:1px solid var(--line);
+}
+.hours td{
+  padding-top:11px;padding-bottom:11px;
+  border-top:1px solid var(--line);
+  color:var(--text);font-size:.94rem;font-weight:300;
+  text-align:right;font-variant-numeric:tabular-nums;
+}
+.hours tr:first-child th,.hours tr:first-child td{border-top:0}
+
+/* ---------- Footer ---------- */
+.foot{
+  background:var(--base-2);
+  border-top:1px solid var(--line);
+  padding-top:64px;padding-bottom:40px;
+}
+.foot__top{
+  display:flex;flex-wrap:wrap;gap:30px;
+  align-items:center;justify-content:space-between;
+  padding-bottom:38px;border-bottom:1px solid var(--line);
+}
+.foot__logo img{height:58px;width:auto}
+.foot__social{
+  display:inline-flex;align-items:center;gap:11px;
+  font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;
+  font-size:.78rem;font-weight:500;letter-spacing:.18em;
+  color:var(--muted);
+  border:1px solid var(--line);
+  padding-top:13px;padding-bottom:13px;
+  padding-left:24px;padding-right:24px;
+  border-radius:2px;
+  transition:color var(--ease),border-color var(--ease),
+             transform var(--ease),background var(--ease);
+}
+.foot__social:hover{
+  color:var(--base);border-color:var(--brass);
+  background:var(--brass);transform:translateY(-2px);
+}
+.foot__social svg{width:16px;height:16px;fill:currentColor}
+.foot__bot{
+  display:flex;flex-wrap:wrap;gap:14px;
+  justify-content:space-between;align-items:center;
+  padding-top:30px;
+  font-size:.84rem;color:var(--muted-2);font-weight:300;
+}
+.foot__bot a{transition:color var(--ease)}
+.foot__bot a:hover{color:var(--brass)}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:980px){
+  .split{grid-template-columns:1fr;gap:44px}
+  .split__img{aspect-ratio:16/11;max-height:440px}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:820px){
+  .nav__inner{padding-left:20px;padding-right:20px}
+  .burger{display:flex}
+  .nav__links{
+    position:fixed;inset:0 0 auto 0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(26,26,24,.99);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--line-2);
+    padding-top:100px;padding-bottom:28px;
+    transform:translateY(-102%);
+    transition:transform .4s cubic-bezier(.4,0,.2,1);
+    box-shadow:0 24px 54px -20px rgba(0,0,0,.8);
+  }
+  .nav__links.is-open{transform:translateY(0)}
+  .nav__links a{
+    padding-top:18px;padding-bottom:18px;
+    padding-left:28px;padding-right:28px;
+    font-size:.95rem;letter-spacing:.22em;
+    border-top:1px solid var(--line);
+  }
+  .nav__links a::after{display:none}
+  .nav__cta{
+    margin-top:22px;margin-left:28px;margin-right:28px;
+    text-align:center;border-top:0 !important;
+    padding-top:16px !important;padding-bottom:16px !important;
+  }
+}
+@media(max-width:640px){
+  section{padding-top:76px;padding-bottom:76px}
+  .wrap{padding-left:20px;padding-right:20px}
+  .hero{padding-top:126px}
+  .hero h1{letter-spacing:.02em}
+  .btn{width:100%;padding-top:16px;padding-bottom:16px}
+  .gallery{gap:8px}
+  .pill{
+    border-left:0;padding-left:0;padding-right:18px;
+    padding-top:6px;padding-bottom:6px;
+  }
+  .stat{padding-right:32px}
+  .lb__nav{width:42px;height:42px}
+  .lb__prev{left:8px}
+  .lb__next{right:8px}
+}
+@media(max-width:380px){
+  .nav__logo img{height:44px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  .rv{opacity:1;transform:none}
+}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__logo" aria-label="Moorland Garden Rooms — home">
+      <img src="images/logo.png" alt="Moorland Garden Rooms">
+    </a>
+    <nav class="nav__links" id="menu">
+      <a href="#services">What we build</a>
+      <a href="#why">Why Moorland</a>
+      <a href="#gallery">Our work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="nav__cta">Free quote</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero__bg" role="img" aria-label="Western red cedar garden room with anthracite bi-fold doors opening onto composite decking"></div>
+  <div class="wrap">
+    <h1>
+      The room your house
+      <span class="accent">never had space for</span>
+    </h1>
+    <p class="lede">
+      Bespoke garden rooms, designed and built to whatever size, shape and finish
+      you have in mind. Fully insulated, fully wired, turn-key — you get the keys
+      and walk straight in.
+    </p>
+    <div class="hero__cta">
+      <a href="#contact" class="btn btn--solid">Request a quote</a>
+      <a href="tel:07507747617" class="btn btn--ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="width:16px;height:16px">
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
+        </svg>
+        07507 747617
+      </a>
+    </div>
+    <div class="hero__strip">
+      <span class="pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Fully insulated
+      </span>
+      <span class="pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Full electrics
+      </span>
+      <span class="pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Turn-key installation
+      </span>
+      <span class="pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Nationwide fitting
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="sec-panel">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">What we build</p>
+      <h2>One team, from<br>foundation to keys</h2>
+      <p class="lede" style="margin-top:1.4rem">
+        Every build is bespoke — any size, shape or finish you want can be achieved,
+        from the finest Canadian western red cedar and Siberian larch through to Hardie
+        plank and the best composite cladding available. Firestone rubber roofing and
+        Osmo oil treatment on the timber as standard. These are the rooms people ask
+        us for most.
+      </p>
+    </div>
+
+    <div class="grid-services rv">
+      <article class="card">
+        <div class="card__ico">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="1"/><path d="M8 20h8M12 18v2"/></svg>
+        </div>
+        <h3>Home office &amp; studio</h3>
+        <p>
+          A properly insulated workspace at the bottom of the garden — heated, wired,
+          double glazed and quiet enough to take the call in. Laminate or engineered
+          floors, T&amp;G or plastered internal finish.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__ico">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v16M18 4v16M6 9h12M6 15h12"/></svg>
+        </div>
+        <h3>Garden gym</h3>
+        <p>
+          Rubber-matted, brightly lit and built to take the weight. Reinforced flooring,
+          full power for cardio equipment, and ventilation that keeps it usable in August.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__ico">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><path d="M3 11h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/></svg>
+        </div>
+        <h3>Garden bar &amp; snug</h3>
+        <p>
+          Bars, snugs and games rooms — bi-folds opening onto the deck, LED lighting,
+          slatted acoustic walls, and room for the dartboard and the beer fridge.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__ico">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V8l8-5 8 5v12"/><path d="M10 20v-5h4v5"/><path d="M2 20h20"/></svg>
+        </div>
+        <h3>Annexe &amp; shower room</h3>
+        <p>
+          Guest annexes and beauty rooms with fully plumbed shower rooms — tiled,
+          heated and finished to the same standard as the main room.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section id="why">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <p class="eyebrow">Why Moorland</p>
+        <h2>Finished like<br>part of the house</h2>
+        <p class="lede" style="margin-top:1.4rem">
+          We're an experienced bespoke design and build service. There's no catalogue
+          to pick from and no fixed kit — any size, shape and finish you desire can be
+          achieved, inside and out. What you get isn't a shed with a plug socket. It's
+          a room you'd be happy to open a door onto.
+        </p>
+
+        <ul class="ticks">
+          <li>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><strong>Finished, not just built.</strong> Quality T&amp;G internal cladding or plastered walls, laminate flooring, internal doors and skirting — decorated and ready to use.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><strong>Warm all year.</strong> Fully insulated floor, walls and roof, uPVC double glazed units, and heating as standard — usable in February, not just July.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><strong>Wired properly.</strong> Full electrics package — sockets where you actually want them, lighting, and heating. Divide the space into separate rooms if you need to.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><strong>Turn-key, nationwide.</strong> Base, build, electrics, interior finish and clean-up — one team, no trades to chase. Based in Colne, fitting across the country.</span>
+          </li>
+        </ul>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__n">100%</div>
+            <div class="stat__l">Recommend on Facebook</div>
+          </div>
+          <div class="stat">
+            <div class="stat__n">Turn-key</div>
+            <div class="stat__l">Base to keys, one team</div>
+          </div>
+          <div class="stat">
+            <div class="stat__n">UK-wide</div>
+            <div class="stat__l">Nationwide fitting</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split__img rv">
+        <img src="images/quality_doors.jpg" alt="Garden room interior with oak doors, laminate flooring and French doors opening onto the garden">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AREAS ================= -->
+<section class="sec-deep">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Where we work</p>
+      <h2>Colne, Lancashire<br>and beyond</h2>
+      <p class="lede" style="margin-top:1.4rem">
+        We're based in Colne and work right across the North West — but we fit
+        nationwide, and we travel for the right project.
+      </p>
+      <div class="tags">
+        <span class="tag">Colne</span>
+        <span class="tag">Nelson</span>
+        <span class="tag">Burnley</span>
+        <span class="tag">Pendle</span>
+        <span class="tag">Barnoldswick</span>
+        <span class="tag">Skipton</span>
+        <span class="tag">Clitheroe</span>
+        <span class="tag">Accrington</span>
+        <span class="tag">Blackburn</span>
+        <span class="tag">Keighley</span>
+        <span class="tag">Lancashire</span>
+        <span class="tag">West Yorkshire</span>
+        <span class="tag tag--wide">Nationwide fitting available</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Our work</p>
+      <h2>Recent builds</h2>
+      <p class="lede" style="margin-top:1.4rem">
+        Every one of these is a real Moorland build. Select any photograph to view it full size.
+      </p>
+    </div>
+
+    <div class="gallery" id="gal">
+      <figure class="shot rv" data-src="images/wales.jpg"><img src="images/wales.jpg" alt="Cedar-clad garden room on a hillside with stone flag patio" loading="lazy"><figcaption class="shot__cap">Cedar · hillside build</figcaption></figure>
+      <figure class="shot rv" data-src="images/nicedouble.jpg"><img src="images/nicedouble.jpg" alt="Wide cedar garden room with twin bi-fold doors and grey decking" loading="lazy"><figcaption class="shot__cap">Cedar · twin bi-folds</figcaption></figure>
+      <figure class="shot rv" data-src="images/dark_double.jpg"><img src="images/dark_double.jpg" alt="Charcoal composite-clad garden room with anthracite bi-fold doors" loading="lazy"><figcaption class="shot__cap">Composite · charcoal</figcaption></figure>
+      <figure class="shot rv" data-src="images/leds_at_night.jpg"><img src="images/leds_at_night.jpg" alt="Cedar garden room lit at dusk with downlights and deck lighting" loading="lazy"><figcaption class="shot__cap">Cedar · lit at dusk</figcaption></figure>
+
+      <figure class="shot rv" data-src="images/room1.jpg"><img src="images/room1.jpg" alt="Interior lounge with herringbone floor, slatted acoustic wall and large TV" loading="lazy"><figcaption class="shot__cap">Interior · lounge</figcaption></figure>
+      <figure class="shot rv" data-src="images/gym.jpg"><img src="images/gym.jpg" alt="Garden gym interior with rubber matting, cardio equipment and geometric wall" loading="lazy"><figcaption class="shot__cap">Interior · garden gym</figcaption></figure>
+      <figure class="shot rv" data-src="images/dartboard.jpg"><img src="images/dartboard.jpg" alt="Garden bar interior with lit dartboard, bar fridges and seating" loading="lazy"><figcaption class="shot__cap">Interior · bar &amp; snug</figcaption></figure>
+      <figure class="shot rv" data-src="images/bathroom.jpg"><img src="images/bathroom.jpg" alt="Tiled shower room with oak vanity unit and feature lighting" loading="lazy"><figcaption class="shot__cap">Interior · shower room</figcaption></figure>
+
+      <figure class="shot rv" data-src="images/doublewide.jpg"><img src="images/doublewide.jpg" alt="Long cedar garden room with two sets of bi-fold doors and topiary" loading="lazy"><figcaption class="shot__cap">Cedar · double bi-fold</figcaption></figure>
+      <figure class="shot rv" data-src="images/darkoak.jpg"><img src="images/darkoak.jpg" alt="Grey composite garden room with corner bi-fold doors and decking" loading="lazy"><figcaption class="shot__cap">Composite · corner glazing</figcaption></figure>
+      <figure class="shot rv" data-src="images/led_outside.jpg"><img src="images/led_outside.jpg" alt="Garden bar exterior lit at night with deck lights and wall light" loading="lazy"><figcaption class="shot__cap">Composite · garden bar</figcaption></figure>
+      <figure class="shot rv" data-src="images/hottub_cover.jpg"><img src="images/hottub_cover.jpg" alt="Bespoke cedar hot tub enclosure with motorised cover on the moors" loading="lazy"><figcaption class="shot__cap">Cedar · hot tub housing</figcaption></figure>
+
+      <figure class="shot rv" data-src="images/dark_brown.jpg"><img src="images/dark_brown.jpg" alt="Dark brown composite garden room with large picture window" loading="lazy"><figcaption class="shot__cap">Composite · picture window</figcaption></figure>
+      <figure class="shot rv" data-src="images/outside_leds.jpg"><img src="images/outside_leds.jpg" alt="Woodgrain composite garden room lit at night with French doors" loading="lazy"><figcaption class="shot__cap">Composite · woodgrain</figcaption></figure>
+      <figure class="shot rv" data-src="images/quality_doors.jpg"><img src="images/quality_doors.jpg" alt="Interior hallway with oak doors and black French doors to the garden" loading="lazy"><figcaption class="shot__cap">Interior · annexe</figcaption></figure>
+      <figure class="shot rv" data-src="images/mountains.jpg"><img src="images/mountains.jpg" alt="Cedar garden room with bi-fold doors framed by open moorland" loading="lazy"><figcaption class="shot__cap">Cedar · moorland setting</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section id="reviews" class="sec-panel">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Reviews</p>
+      <h2>What customers say</h2>
+      <div class="rev-head">
+        <span class="rev-head__score">100%</span>
+        <span class="rev-head__txt">recommend, based on 5 Facebook reviews</span>
+      </div>
+    </div>
+
+    <div class="grid-reviews">
+      <article class="review rv">
+        <div class="review__mark">&ldquo;</div>
+        <p class="review__q">
+          Just had the best help from moorland products and services team going above
+          and beyond, highly recommend this company
+        </p>
+        <h3>Pete Handforth</h3>
+        <p class="review__src">Recommends · Facebook</p>
+      </article>
+
+      <article class="review rv">
+        <div class="review__mark">&ldquo;</div>
+        <p class="review__q">
+          Love our garden bar. Great workmanship
+        </p>
+        <h3>Sharon Connolly</h3>
+        <p class="review__src">Recommends · Facebook</p>
+      </article>
+
+      <article class="review rv">
+        <div class="review__mark">&ldquo;</div>
+        <p class="review__q">
+          Thank you for all your hard work I'm so impressed with my Beauty Room.
+          It was up and running within 4days. So happy would definitely recommend reliable,…
+        </p>
+        <h3>Louise Ellis-now Kilgour</h3>
+        <p class="review__src">Recommends · Facebook</p>
+      </article>
+
+      <article class="review rv">
+        <div class="review__mark">&ldquo;</div>
+        <p class="review__q">
+          Fantastic service from start to finish excellent workmanship
+        </p>
+        <h3>Kim Berley</h3>
+        <p class="review__src">Recommends · Facebook</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Free quote</p>
+      <h2>Start your build</h2>
+      <p class="lede" style="margin-top:1.4rem">
+        Free, no-obligation quote service. Tell us roughly what you're after and
+        we'll come back to you — a quick message can get your dreams started.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <form class="rv" id="quoteForm" novalidate>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input type="text" id="f-name" name="name" placeholder="Jane Smith" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input type="tel" id="f-phone" name="phone" placeholder="07…" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" placeholder="you@email.com">
+        </div>
+        <div class="field">
+          <label for="f-msg">What are you thinking of?</label>
+          <textarea id="f-msg" name="message" placeholder="Rough size, what you'd use it for, and where you are." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--solid" style="width:100%">Send enquiry</button>
+        <p id="formNote" style="margin-top:16px;font-size:.88rem;color:var(--muted-2);font-weight:300"></p>
+      </form>
+
+      <div class="rv">
+        <div class="info__row">
+          <div class="info__ico">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          </div>
+          <div>
+            <div class="info__k">Phone</div>
+            <div class="info__v"><a href="tel:07507747617">07507 747617</a></div>
+          </div>
+        </div>
+
+        <div class="info__row">
+          <div class="info__ico">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="m2 7 10 6 10-6"/></svg>
+          </div>
+          <div>
+            <div class="info__k">Email</div>
+            <div class="info__v"><a href="mailto:moorlandservices@gmail.com">moorlandservices@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div class="info__row">
+          <div class="info__ico">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="info__k">Based in</div>
+            <div class="info__v">
+              Colne, United Kingdom<br>
+              <a href="https://www.google.com/maps/search/?api=1&query=Colne%2C+United+Kingdom"
+                 target="_blank" rel="noopener"
+                 style="font-size:.88rem;color:var(--brass)">View on map →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="info__row">
+          <div class="info__ico">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          </div>
+          <div style="flex:1">
+            <div class="info__k">Opening hours</div>
+            <table class="hours">
+              <tbody>
+                <tr><th scope="row">Monday – Friday</th><td>8:00 – 18:00</td></tr>
+                <tr><th scope="row">Saturday</th><td>9:00 – 16:00</td></tr>
+                <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <a href="#top" class="foot__logo" aria-label="Moorland Garden Rooms — back to top">
+        <img src="images/logo.png" alt="Moorland Garden Rooms">
+      </a>
+      <a class="foot__social" href="https://www.facebook.com/moorlandproductsandservices" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+        Follow on Facebook
+      </a>
+    </div>
+    <div class="foot__bot">
+      <span>© <span id="yr">2025</span> Moorland Products and Services · Bespoke garden rooms, Colne</span>
+      <span><a href="tel:07507747617">07507 747617</a> · <a href="mailto:moorlandservices@gmail.com">moorlandservices@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb__x" id="lbX" aria-label="Close">&times;</button>
+  <button class="lb__nav lb__prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb__nav lb__next" id="lbNext" aria-label="Next photo">&#8250;</button>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ---- Nav scroll state ---- */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('is-stuck', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---- Burger ---- */
+  var burger = document.getElementById('burger');
+  var menu   = document.getElementById('menu');
+
+  function setMenu(open){
+    menu.classList.toggle('is-open', open);
+    burger.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  burger.addEventListener('click', function(){
+    setMenu(!menu.classList.contains('is-open'));
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ setMenu(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') setMenu(false);
+  });
+
+  /* ---- Scroll reveal ---- */
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rvs = document.querySelectorAll('.rv');
+  if(reduced || !('IntersectionObserver' in window)){
+    rvs.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    rvs.forEach(function(el, i){
+      el.style.transitionDelay = (Math.min(i,4) * 70) + 'ms';
+      io.observe(el);
+    });
+  }
+
+  /* ---- Lightbox ---- */
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.shot'));
+  var lb    = document.getElementById('lb');
+  var lbImg = document.getElementById('lbImg');
+  var idx   = 0;
+
+  function show(i){
+    idx = (i + shots.length) % shots.length;
+    var fig = shots[idx];
+    lbImg.src = fig.dataset.src;
+    lbImg.alt = fig.querySelector('img').alt;
+  }
+  function open(i){
+    show(i);
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lb.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  shots.forEach(function(fig, i){
+    fig.setAttribute('tabindex','0');
+    fig.setAttribute('role','button');
+    fig.addEventListener('click', function(){ open(i); });
+    fig.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(i); }
+    });
+  });
+
+  document.getElementById('lbX').addEventListener('click', close);
+  document.getElementById('lbNext').addEventListener('click', function(e){ e.stopPropagation(); show(idx+1); });
+  document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); show(idx-1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('is-open')) return;
+    if(e.key === 'Escape')     close();
+    if(e.key === 'ArrowRight') show(idx+1);
+    if(e.key === 'ArrowLeft')  show(idx-1);
+  });
+
+  /* ---- Form ----
+     No backend wired up yet. Rather than silently swallow the enquiry,
+     hand off to the customer's own mail client so nothing is lost. */
+  var form = document.getElementById('quoteForm');
+  var note = document.getElementById('formNote');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name  = document.getElementById('f-name').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var msg   = document.getElementById('f-msg').value.trim();
+
+    if(!name || !phone || !msg){
+      note.style.color = '#D99A6C';
+      note.textContent = 'Add your name, phone number and a short message so we can quote.';
+      return;
+    }
+    var body = 'Name: ' + name + '\nPhone: ' + phone + '\nEmail: ' + email + '\n\n' + msg;
+    note.style.color = '';
+    note.textContent = 'Opening your email app…';
+    window.location.href = 'mailto:moorlandservices@gmail.com'
+      + '?subject=' + encodeURIComponent('Garden room enquiry — ' + name)
+      + '&body='    + encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
